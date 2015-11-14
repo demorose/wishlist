@@ -1,0 +1,14 @@
+<template name="myList">
+    {{#each myList }}
+    <div class="wishlist" id="my_wishlist">
+        <ul>
+            {{#each items}}
+            <li>{{label}}</li>
+            {{/each }}
+        </ul>
+        <form>
+            <input class="add_item" type="text" />
+        </form>
+    </div>
+    {{/each }}
+</template>

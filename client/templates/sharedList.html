@@ -1,0 +1,11 @@
+<template name="sharedList">
+    <div class="wishlist">
+        {{#each items}}
+            {{> sharedItem}}
+        {{/each }}
+    </div>
+</template>
+
+<template name="sharedItem">
+    <div class="shared_item"><input type="checkbox" /><span class="item_label">{{label}}</span></div>
+</template>

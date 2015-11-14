@@ -1,0 +1,17 @@
+<head>
+    <title>Wishes</title>
+</head>
+
+<body>
+    {{> loginButtons}}
+    <h1>Wishes</h1>
+
+    <h2>My Wishlist</h2>
+    {{> myList}}
+    <h2>Shared with me</h2>
+    {{#each sharedLists }}
+        {{> sharedList}}
+    {{/each }}
+</body>
+
+

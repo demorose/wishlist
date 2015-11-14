@@ -1,1 +1,27 @@
 /* CSS declarations go here */
+
+body {
+    text-align: center;
+}
+
+div.wishlist {
+    width: 200px;
+    background: blue;
+    display: inline-block;
+    padding: 5px;
+    text-align: left;
+}
+
+div.wishlist .shared_item .item_label {
+    margin-left: 5px;
+}
+
+div.wishlist#my_wishlist .add_item {
+    border: 1px solid #C0C0C0;
+    width: 190px;
+    background: rgba(255,255,255, 0.7);
+}
+
+div.wishlist#my_wishlist {
+    background: yellow;
+}
