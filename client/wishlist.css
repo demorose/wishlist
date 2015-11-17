@@ -5,23 +5,38 @@ body {
 }
 
 div.wishlist {
-    width: 200px;
+    padding: 5px;
+}
+
+div.wishlist .content {
+    width: 100%;
     background: blue;
     display: inline-block;
     padding: 5px;
     text-align: left;
 }
 
-div.wishlist .shared_item .item_label {
+div.wishlist .content .shared_item .item_label {
     margin-left: 5px;
 }
 
-div.wishlist#my_wishlist .add_item {
+div.wishlist#my_wishlist .content .add_item {
     border: 1px solid #C0C0C0;
     width: 190px;
     background: rgba(255,255,255, 0.7);
 }
 
-div.wishlist#my_wishlist {
+div.wishlist#my_wishlist .content {
     background: yellow;
+}
+
+#login-dropdown-list {
+    position: absolute;
+    top:0px;
+    left: 0px;
+    display: inline-block;
+}
+
+h1, h2 {
+    border-bottom: 1px solid #c4c4c4;
 }

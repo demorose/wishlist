@@ -1,17 +1,35 @@
 <head>
     <title>Wishes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
 
 <body>
-    {{> loginButtons}}
-    <h1>Wishes</h1>
+    <div class="container">
+        <div id="row-1st" class="row">
+            <div class="col-xs-12">
+                {{> loginButtons}}
+                <h1>Wishes</h1>
+            </div>
+        </div>
 
-    <h2>My Wishlist</h2>
-    {{> myList}}
-    <h2>Shared with me</h2>
-    {{#each sharedLists }}
-        {{> sharedList}}
-    {{/each }}
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-12">
+                        <h2>My Wishlist</h2>
+                        {{> myList}}
+                    </div>
+
+                    <div class="col-sm-6 col-xs-12">
+                        <h2>Shared with me</h2>
+                        {{#each sharedLists }}
+                        {{> sharedList}}
+                        {{/each }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 

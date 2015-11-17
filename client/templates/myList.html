@@ -1,14 +1,24 @@
 <template name="myList">
-    {{#each myList }}
-    <div class="wishlist" id="my_wishlist">
-        <ul>
-            {{#each items}}
-            <li>{{label}}</li>
-            {{/each }}
-        </ul>
-        <form>
-            <input class="add_item" type="text" />
-        </form>
+    <button id="addList" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Add a list</button>
+    <div class="row">
+        {{#each myList }}
+            {{>ownList}}
+        {{/each }}
     </div>
-    {{/each }}
+</template>
+
+<template name="ownList">
+    <div class="wishlist col-sm-6 col-xs-12" id="my_wishlist">
+        <div class="content">
+            <span class="delete glyphicon glyphicon-remove"></span>
+            <ul>
+                {{#each items}}
+                    <li>{{label}}</li>
+                {{/each }}
+            </ul>
+            <form>
+                <input class="add_item" type="text" />
+            </form>
+        </div>
+    </div>
 </template>
