@@ -10,15 +10,19 @@
 <template name="ownList">
     <div class="wishlist col-sm-6 col-xs-12" id="my_wishlist">
         <div class="content">
-            <span class="delete glyphicon glyphicon-remove"></span>
             <ul>
                 {{#each items}}
                     <li>{{label}}</li>
                 {{/each }}
             </ul>
-            <form>
+            <form class="addItem">
                 <input class="add_item" type="text" />
             </form>
+            <div class="actions">
+                <span data-toggle="tooltip" data-placement="bottom" title="Change color" class="action share glyphicon glyphicon-tint"></span>
+                <span data-toggle="tooltip" data-placement="bottom" title="share" class="action share glyphicon glyphicon-share"></span>
+                <span data-toggle="tooltip" data-placement="bottom" title="delete" class="action delete glyphicon glyphicon-remove"></span>
+            </div>
         </div>
     </div>
 </template>

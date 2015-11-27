@@ -7,9 +7,6 @@ Template.myList.helpers({
 });
 
 Template.myList.events({
-    'submit form': function(e) {
-        e.preventDefault();
-    },
     'click #addList': function(e) {
         e.preventDefault();
         Meteor.call('createList');
@@ -22,5 +19,8 @@ Template.ownList.events({
         if (confirm("Delete this list?")) {
             Meteor.call('deleteList', this._id);
         }
+    },
+    'submit form.addItem': function(e) {
+        e.preventDefault();
     },
 });

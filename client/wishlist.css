@@ -4,10 +4,18 @@ body {
     text-align: center;
 }
 
+.action {
+    cursor: pointer;
+}
+
 div.wishlist {
     padding: 5px;
 }
 
+div.wishlist .actions {
+    margin-top: 10px;
+    text-align: right;
+}
 div.wishlist .content {
     width: 100%;
     background: blue;
@@ -22,8 +30,8 @@ div.wishlist .content .shared_item .item_label {
 
 div.wishlist#my_wishlist .content .add_item {
     border: 1px solid #C0C0C0;
-    width: 190px;
     background: rgba(255,255,255, 0.7);
+    width: 100%;
 }
 
 div.wishlist#my_wishlist .content {
