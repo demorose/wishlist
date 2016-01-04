@@ -21,6 +21,7 @@ Template.ownList.events({
         }
     },
     'submit form.addItem': function(e) {
+        Meteor.call('createItem', 'toto', this._id);
         e.preventDefault();
     },
 });
