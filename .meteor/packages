@@ -21,3 +21,6 @@ accounts-password
 mizzao:bootstrap-3
 audit-argument-checks
 mizzao:bootboxjs
+tap:i18n
+tap:i18n-db
+tap:i18n-ui

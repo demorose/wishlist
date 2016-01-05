@@ -10,3 +10,7 @@ Meteor.publish('myItems', function() {
     },
     {fields: {checked: false, checker: false}})
 })
+
+Meteor.publish('users', function(){
+    return Meteor.users.find({},{fields: {_id: true, username: true}});
+})

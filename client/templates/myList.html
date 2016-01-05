@@ -1,5 +1,5 @@
 <template name="myList">
-    <button id="addList" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Add a list</button>
+    <button id="addList" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> {{_ "add_list"}}</button>
     <div class="row">
         {{#each myList }}
             {{>ownList}}
@@ -16,20 +16,20 @@
                         {{>ownItem}}
                     {{/each }}
             {{else}}
-                        <p>This list is empty</p>
+                <p>{{_ "empty_list"}}</p>
             {{/if}}
             <form class="addItem">
                 <div class="input-group">
                     <input class="form-control add_item input-group-addon" type="text" name="name" />
                     <span class = "input-group-btn">
-                        <button class="btn btn-primary validate" type="submit">OK</button>
+                        <button class="btn btn-primary validate" type="submit">{{_ "add"}}</button>
                     </span>
                 </div>
             </form>
             <div class="actions">
-                <span data-toggle="tooltip" data-placement="bottom" title="Change color" class="action share glyphicon glyphicon-tint"></span>
-                <span data-toggle="tooltip" data-placement="bottom" title="share" class="action share glyphicon glyphicon-share"></span>
-                <span data-toggle="tooltip" data-placement="bottom" title="delete" class="action delete glyphicon glyphicon-remove"></span>
+                <span data-toggle="tooltip" data-placement="bottom" title="{{_ "change_color"}}" class="action share glyphicon glyphicon-tint"></span>
+                <span data-toggle="tooltip" data-placement="bottom" title="{{_ "share"}}" class="action share glyphicon glyphicon-share"></span>
+                <span data-toggle="tooltip" data-placement="bottom" title="{{_ "delete"}}" class="action delete glyphicon glyphicon-remove"></span>
             </div>
         </div>
     </div>
@@ -37,7 +37,7 @@
 
 <template name="ownItem">
     <div>
-        <span data-toggle="tooltip" data-placement="bottom" title="delete" class="action delete glyphicon glyphicon-remove"></span>
+        <span data-toggle="tooltip" data-placement="bottom" title="{{_ "delete"}}" class="action delete glyphicon glyphicon-remove"></span>
         <span>{{name}}</span>
     </div>
 </template>
