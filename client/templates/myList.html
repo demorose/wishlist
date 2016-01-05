@@ -8,15 +8,23 @@
 </template>
 
 <template name="ownList">
-    <div class="wishlist col-sm-12 col-xs-12" id="my_wishlist">
+    <div class="wishlist col-sm-12 col-xs-12 my_wishlist">
         <div class="content">
-            <ul>
-                {{#each items}}
-                    <li>{{label}}</li>
-                {{/each }}
-            </ul>
+            <div class="list_name">{{name}}</div>
+            {{#if items.count}}
+                    {{#each items}}
+                        {{>ownItem}}
+                    {{/each }}
+            {{else}}
+                        <p>This list is empty</p>
+            {{/if}}
             <form class="addItem">
-                <input class="add_item" type="text" />
+                <div class="input-group">
+                    <input class="form-control add_item input-group-addon" type="text" name="name" />
+                    <span class = "input-group-btn">
+                        <button class="btn btn-primary validate" type="submit">OK</button>
+                    </span>
+                </div>
             </form>
             <div class="actions">
                 <span data-toggle="tooltip" data-placement="bottom" title="Change color" class="action share glyphicon glyphicon-tint"></span>
@@ -24,5 +32,12 @@
                 <span data-toggle="tooltip" data-placement="bottom" title="delete" class="action delete glyphicon glyphicon-remove"></span>
             </div>
         </div>
+    </div>
+</template>
+
+<template name="ownItem">
+    <div>
+        <span data-toggle="tooltip" data-placement="bottom" title="delete" class="action delete glyphicon glyphicon-remove"></span>
+        <span>{{name}}</span>
     </div>
 </template>

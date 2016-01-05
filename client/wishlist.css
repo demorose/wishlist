@@ -25,18 +25,21 @@ div.wishlist .content {
     text-align: left;
 }
 
+div.wishlist .list_name {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
 div.wishlist .content .shared_item .item_label {
     margin-left: 5px;
 }
 
-div.wishlist#my_wishlist .content .add_item {
-    border: 1px solid #C0C0C0;
-    background: rgba(255,255,255, 0.7);
-    width: 100%;
-    border-radius: 5px 5px;
+div.wishlist.my_wishlist .content .addItem {
+    margin: 10px;
 }
 
-div.wishlist#my_wishlist .content {
+div.wishlist.my_wishlist .content {
     background: yellow;
 }
 
