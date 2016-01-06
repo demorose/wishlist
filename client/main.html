@@ -5,14 +5,7 @@
 
 <body>
     <div class="container">
-        <div id="row-1st" class="row">
-            <div class="col-xs-12">
-                {{> loginButtons}}
-                {{> i18n_dropdown}}
-                <h1>Wishes</h1>
-            </div>
-        </div>
-
+        {{> header }}
         {{#if currentUser}}
         <div class="row">
             <div class="col-xs-12">
@@ -36,3 +29,13 @@
 </body>
 
 
+<template name="header">
+        <div id="row-1st" class="row">
+            <div class="col-xs-12">
+                {{> loginButtons}}
+                {{> i18n_dropdown}}
+                <h1>Wishes</h1>
+            </div>
+        </div>
+
+</template>

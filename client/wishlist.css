@@ -50,6 +50,14 @@ div.wishlist.my_wishlist .content {
     display: inline-block;
 }
 
+.tap-i18n-dropdown {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+    width: 250px;
+}
+
 .container {
     border-radius: 10px 10px;
     padding-bottom: 10px;
