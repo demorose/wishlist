@@ -50,7 +50,7 @@ Template.ownList.events({
         users.forEach(function(user) {
             message += '<div class="checkbox-inline"> \
                 <label> \
-                    <input name="users[]" type="checkbox" id="" value="' + user._id + '" aria-label=""> \
+                    <input name="users[]" type="checkbox" ' + (list.sharedWith.indexOf(user._id) != -1 ? 'checked="checked"' : '') +' id="" value="' + user._id + '" aria-label=""> \
                     ' + user.username + ' \
                 </label> \
             </div>'
@@ -75,7 +75,7 @@ Template.ownList.events({
                                 users.push(this.value);
                             }
                         });
-                        console.log(users);
+                        Meteor.call('shareList', list._id, users);
                     }
                 }
             }
