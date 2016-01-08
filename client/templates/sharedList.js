@@ -18,3 +18,12 @@ Template.sharedList.helpers({
         return Meteor.users.findOne(list.owner);
     }
 })
+
+Template.sharedItem.events({
+    'click .shared_item input[type="checkbox"]': function(event) {
+        var item = this;
+        var checked = event.target.checked;
+        console.log(checked);
+        Meteor.call('checkItem', item._id, checked );
+    }
+})
