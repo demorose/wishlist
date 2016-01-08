@@ -12,5 +12,9 @@ Template.sharedList.helpers({
         return Item.find({
             'list' : list._id,
         })
+    },
+    owner : function() {
+        var list = this;
+        return Meteor.users.findOne(list.owner);
     }
 })

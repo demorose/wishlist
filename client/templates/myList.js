@@ -17,6 +17,10 @@ Template.myList.events({
     },
 });
 
+Template.myList.onRendered(function() {
+    //$('.action').tooltip({title: function(){console.log('toto');return this.attr('class');}});
+});
+
 Template.ownList.helpers({
     items : function() {
         var list = this;

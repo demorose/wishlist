@@ -11,7 +11,13 @@
 </template>
 
 <template name="sharedList">
-    {{#each items }}
-        {{> sharedItem }}
-    {{/each }}
+    <div class="wishlist col-sm-12 col-xs-12">
+        <div class="content">
+            <span class='owner'>{{ owner.username }}</span>
+            <div class="list_name">{{name}}</div>
+                {{#each items }}
+                    {{> sharedItem }}
+                {{/each }}
+        </div>
+    </div>
 </template>
