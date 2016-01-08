@@ -88,7 +88,7 @@ Template.ownList.events({
     'submit form.addItem': function(e) {
         var list = this;
         e.preventDefault();
-        var text = event.target.name.value;
+        var text = e.target.name.value;
         Meteor.call('createItem', text, list._id);
         // Clear form
         e.target.name.value = "";
