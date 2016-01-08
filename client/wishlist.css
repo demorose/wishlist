@@ -25,6 +25,11 @@ div.wishlist .content {
     text-align: left;
 }
 
+div.wishlist .list_items {
+    max-height: 300px;
+    overflow: auto;
+}
+
 div.wishlist .list_name {
     text-align: center;
     font-size: 16px;

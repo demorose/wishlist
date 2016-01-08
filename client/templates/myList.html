@@ -11,6 +11,7 @@
     <div class="wishlist col-sm-12 col-xs-12 my_wishlist">
         <div class="content">
             <div class="list_name">{{name}}</div>
+            <div class="list_items">
             {{#if items.count}}
                     {{#each items}}
                         {{>ownItem}}
@@ -18,6 +19,7 @@
             {{else}}
                 <p>{{_ "empty_list"}}</p>
             {{/if}}
+            </div>
             <form class="addItem">
                 <div class="input-group">
                     <input class="form-control add_item input-group-addon" type="text" name="name" />

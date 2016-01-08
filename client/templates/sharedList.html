@@ -15,9 +15,11 @@
         <div class="content">
             <span class='owner'>{{ owner.username }}</span>
             <div class="list_name">{{name}}</div>
+            <div class="list_items">
                 {{#each items }}
                     {{> sharedItem }}
                 {{/each }}
+            </div>
         </div>
     </div>
 </template>
