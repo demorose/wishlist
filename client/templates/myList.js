@@ -91,7 +91,7 @@ Template.ownList.events({
         var text = event.target.name.value;
         Meteor.call('createItem', text, list._id);
         // Clear form
-        event.target.name.value = "";
+        e.target.name.value = "";
     },
 });
 
