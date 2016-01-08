@@ -11,7 +11,7 @@ Template.sharedList.helpers({
         var list = this;
         return Item.find({
             'list' : list._id,
-        })
+        }, {sort: {name: 1}})
     },
     owner : function() {
         var list = this;
