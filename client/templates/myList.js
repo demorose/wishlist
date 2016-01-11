@@ -27,7 +27,7 @@ Template.ownList.helpers({
         return Item.find({
             'list' : list._id,
             'owner': Meteor.userId()
-        }, {sort: {name: 1}})
+        }, {sort: {creation_date: 1}})
     }
 });
 
