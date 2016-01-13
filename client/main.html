@@ -22,13 +22,20 @@
                 </div>
             </div>
         </div>
+        {{ else }}
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>{{_ "welcome_message" }}</p>
+                    <p>{{_ "to_continu"}}</p>
+                </div>
+            </div>
         {{/if}}
     </div>
 </body>
 
 
 <template name="header">
-        <div id="row-1st" class="row">
+        <div id="header" class="row">
             <div class="col-xs-12">
                 {{> loginButtons}}
                 {{> i18n_dropdown}}

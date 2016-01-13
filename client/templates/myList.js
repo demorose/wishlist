@@ -55,7 +55,7 @@ Template.ownList.events({
             message += '<div class="checkbox-inline"> \
                 <label> \
                     <input name="users[]" type="checkbox" ' + (list.sharedWith.indexOf(user._id) != -1 ? 'checked="checked"' : '') +' id="" value="' + user._id + '" aria-label=""> \
-                    ' + user.username + ' \
+                    ' + user.profile.name + ' \
                 </label> \
             </div>'
         });

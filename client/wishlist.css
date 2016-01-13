@@ -1,5 +1,9 @@
 /* CSS declarations go here */
 
+html {
+    padding-top: 0px;
+}
+
 body {
     text-align: center;
 }
@@ -60,22 +64,57 @@ div.wishlist.my_wishlist .content {
 
 #login-dropdown-list {
     position: absolute;
-    top:10px;
-    left: 10px;
     display: inline-block;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+#login-dropdown-list .dropdown-toggle {
+    display: flex;
+    height: 100%;
+    padding: 10px;
+    justify-content:center;
+    align-items:center;
+    color: #555;
+}
+
+#login-dropdown-list .dropdown-toggle:hover {
+    background: #eaeaea;
+    text-decoration: none;
+    font-style: none;
+    color: #aaa;
+}
+
+#login-dropdown-list .caret {
+    display: none;
 }
 
 .tap-i18n-dropdown {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    display: inline-block;
-    width: 250px;
+    top: 0px;
+    right: 0px;
+    width: 150px;
+    display: flex;
+    height: 100%;
+    padding: 10px;
+    justify-content:center;
+    align-items:center;
+    color: #555;
 }
 
 .container {
-    border-radius: 10px 10px;
+    border-radius: 0px 0px 10px 10px;
     padding-bottom: 10px;
-    margin-top: 10px;
-    background: #ececec;
+    background: #eee;
+}
+
+#header {
+    background: #ddd;
+    border-bottom: 2px solid #ccc;
+}
+
+#heeader h1 {
+    color: #646656;
+    margin: 15px;
 }

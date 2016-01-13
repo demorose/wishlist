@@ -26,5 +26,5 @@ Meteor.publish('myItems', function() {
 })
 
 Meteor.publish('users', function(){
-    return Meteor.users.find({},{fields: {_id: true, username: true}});
+    return Meteor.users.find({},{fields: {_id: true, username: true, profile: true}});
 })

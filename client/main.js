@@ -5,5 +5,9 @@ Meteor.subscribe('users');
 Meteor.subscribe('sharedList');
 Meteor.subscribe('sharedItem');
 
-$(function () {
-})
+
+TAPi18n._afterUILanguageChange =function () {
+    accountsUIBootstrap3.setLanguage(TAPi18n.getLanguage());
+};
+
+accountsUIBootstrap3.setLanguage(TAPi18next.detectLanguage());
