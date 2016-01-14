@@ -9,7 +9,7 @@ Template.myList.helpers({
 Template.myList.events({
     'click #addList': function(e) {
         e.preventDefault();
-        bootbox.prompt(TAPi18n.__('list_name_prompt'), function(name) {
+        bootbox.prompt(i18n('list_name_prompt'), function(name) {
             if(name) {
                 Meteor.call('createList', name);
             }
@@ -35,7 +35,7 @@ Template.ownList.events({
     'click .delete': function(e) {
         e.preventDefault();
         var list = this;
-        bootbox.confirm(TAPi18n.__("delete_list_confirmation"), function(result) {
+        bootbox.confirm(i18n("delete_list_confirmation"), function(result) {
             console.log(result);
             if (result) {
                 Meteor.call('deleteList', list._id);
@@ -69,7 +69,7 @@ Template.ownList.events({
             message: message,
             buttons: {
                 success: {
-                    label: TAPi18n.__("share"),
+                    label: i18n("share"),
                     className: "btn-success",
                     callback: function () {
                         var users = [];

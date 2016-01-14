@@ -2,7 +2,7 @@ Accounts.ui.config ({
     passwordSignupFields: 'USERNAME_ONLY',
     extraSignupFields: [{
         fieldName: 'name',
-        fieldLabel: 'Full name',
+        fieldLabel: i18n('loginFields.name'),
         inputType: 'text',
         visible: true,
         validate: function(value, errorFunction) {
