@@ -1,5 +1,5 @@
 Accounts.ui.config ({
-    passwordSignupFields: 'USERNAME_ONLY',
+    passwordSignupFields: 'USERNAME_AND_EMAIL',
     extraSignupFields: [{
         fieldName: 'name',
         fieldLabel: i18n('loginFields.name'),
