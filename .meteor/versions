@@ -79,6 +79,7 @@ tap:i18n@1.7.0
 tap:i18n-db@0.4.0
 templating@1.1.5
 templating-tools@1.0.0
+tmeasday:publish-with-relations@0.2.0
 tracker@1.0.9
 ui@1.0.8
 underscore@1.0.4

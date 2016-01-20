@@ -6,4 +6,4 @@ Meteor.subscribe('myItems');
 Meteor.subscribe('users');
 
 Meteor.subscribe('sharedList');
-Meteor.subscribe('sharedItem');
+//Meteor.subscribe('sharedItem');
