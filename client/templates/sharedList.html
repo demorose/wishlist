@@ -7,7 +7,15 @@
 </template>
 
 <template name="sharedItem">
-    <div class="shared_item"><input type="checkbox" checked="{{ checked }}"/><span class="item_label">{{name}}</span></div>
+    {{# if checked }}
+        {{# if canUncheck }}
+        <div class="shared_item"><input type="checkbox" checked="{{ checked }}" title="{{ checkerUser.profile.name }}"/><span class="item_label">{{name}}</span></div>
+        {{ else }}
+        <div class="shared_item"><input type="checkbox" checked="{{ checked }}" title="{{ checkerUser.profile.name }}" disabled /><span class="item_label">{{name}}</span></div>
+        {{/ if }}
+    {{ else }}
+        <div class="shared_item"><input type="checkbox" checked="{{ checked }}"/><span class="item_label">{{name}}</span></div>
+    {{/ if }}
 </template>
 
 <template name="sharedList">
