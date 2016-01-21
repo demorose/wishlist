@@ -43,9 +43,18 @@ div.wishlist .list_name {
     padding-bottom: 5px;
 }
 
+div.wishlist.shared_list .list_name {
+    margin-top: 10px;
+}
+
+div.wishlist.shared_list:first-child {
+    margin-top: 28px;
+}
+
 div.wishlist .owner {
     position: absolute;
     right: 10px;
+    top: 10px;
     font-weight: normal;
     font-style: italic;
 }
@@ -56,6 +65,13 @@ div.wishlist .content .shared_item .item_label {
 
 div.wishlist.my_wishlist .content .addItem {
     margin: 10px;
+}
+
+div.wishlist .item {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 div.wishlist.my_wishlist .content {

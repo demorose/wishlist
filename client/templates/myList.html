@@ -1,14 +1,12 @@
 <template name="myList">
     <button id="addList" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> {{i18n "add_list"}}</button>
-    <div class="row">
         {{#each myList }}
             {{>ownList}}
         {{/each }}
-    </div>
 </template>
 
 <template name="ownList">
-    <div class="wishlist col-sm-12 col-xs-12 my_wishlist">
+    <div class="wishlist my_wishlist">
         <div class="content">
             <div class="list_name">{{name}}</div>
             <div class="list_items">
@@ -38,8 +36,8 @@
 </template>
 
 <template name="ownItem">
-    <div>
+    <div class="item">
         <span data-toggle="tooltip" data-placement="bottom" title="{{i18n "delete"}}" class="action delete glyphicon glyphicon-remove"></span>
-        <span>{{name}}</span>
+        <span class="name" title="{{name}}">{{name}}</span>
     </div>
 </template>
