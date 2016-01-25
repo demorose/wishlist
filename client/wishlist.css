@@ -44,11 +44,9 @@ div.wishlist .list_name {
 }
 
 div.wishlist.shared_list .list_name {
-    margin-top: 10px;
 }
 
 div.wishlist.shared_list:first-child {
-    margin-top: 28px;
 }
 
 div.wishlist .owner {

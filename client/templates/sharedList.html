@@ -1,9 +1,16 @@
 <template name="sharedLists">
-    <div class="wishlist">
+    <div class="input-group">
+        <div class="input-group-addon">{{i18n "display_list_of"}}</div>
+        <select class="form-control" id="select_owner">
+            <option>---</option>
+            {{# each sharingUser }}
+            <option value="{{_id}}">{{ profile.name }}</option>
+            {{/each }}
+        </select>
+    </div>
         {{#each sharedLists }}
             {{> sharedList }}
         {{/each }}
-    </div>
 </template>
 
 <template name="sharedItem">
@@ -21,12 +28,14 @@
 <template name="sharedList">
     <div class="wishlist shared_list col-sm-12 col-xs-12">
         <div class="content">
-            <span class='owner'>{{ owner.profile.name }}</span>
             <div class="list_name">{{name}}</div>
             <div class="list_items">
                 {{#each items }}
                     {{> sharedItem }}
                 {{/each }}
+            </div>
+            <div class="actions">
+                <span data-toggle="tooltip" data-placement="bottom" title="{{i18n "unsubscribe"}}" class="action unsubscribe glyphicon glyphicon-remove"></span>
             </div>
         </div>
     </div>
