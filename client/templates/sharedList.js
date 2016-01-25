@@ -17,7 +17,7 @@ Template.sharedLists.helpers({
         for (x in lists) {
             userIds.push(lists[x].owner);
         }
-        return Meteor.users.find({_id: {$in: userIds}});
+        return Meteor.users.find({_id: {$in: userIds}}, {$sort: {'profile.name': 1}});
     }
 });
 
