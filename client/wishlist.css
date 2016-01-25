@@ -132,3 +132,13 @@ div.wishlist.my_wishlist .content {
     color: #646656;
     margin: 15px;
 }
+
+#select_owner_group {
+    padding: 0px 5px;
+}
+
+.group-label {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
