@@ -1,0 +1,6 @@
+<template name="myList">
+    <button id="addList" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> {{i18n "add_list"}}</button>
+        {{#each myList }}
+            {{>ownList}}
+        {{/each }}
+</template>

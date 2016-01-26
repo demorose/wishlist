@@ -1,23 +1,3 @@
-Template.myList.helpers({
-    myList : function() {
-        return List.find({
-            'owner' : Meteor.userId()
-        })
-    }
-});
-
-Template.myList.events({
-    'click #addList': function(e) {
-        e.preventDefault();
-        bootbox.prompt(i18n('list_name_prompt'), function(name) {
-            if(name) {
-                Meteor.call('createList', name);
-            }
-        })
-    },
-});
-
-
 Template.ownList.helpers({
     items : function() {
         var list = this;
@@ -91,11 +71,3 @@ Template.ownList.events({
         e.target.name.value = "";
     },
 });
-
-Template.ownItem.events({
-    'click .delete': function(e) {
-        var item = this;
-        e.preventDefault();
-        Meteor.call('deleteItem', item._id);
-    },
-})

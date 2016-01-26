@@ -1,0 +1,15 @@
+<template name="sharedList">
+    <div class="wishlist shared_list col-sm-12 col-xs-12">
+        <div class="content">
+            <div class="list_name">{{name}}</div>
+            <div class="list_items">
+                {{#each items }}
+                    {{> sharedItem }}
+                {{/each }}
+            </div>
+            <div class="actions">
+                <span data-toggle="tooltip" data-placement="bottom" title="{{i18n "unsubscribe"}}" class="action unsubscribe glyphicon glyphicon-remove"></span>
+            </div>
+        </div>
+    </div>
+</template>

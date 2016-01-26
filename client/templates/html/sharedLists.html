@@ -1,0 +1,14 @@
+<template name="sharedLists">
+    <div class="input-group" id="select_owner_group">
+        <div class="input-group-addon group-label">{{i18n "display_list_of"}}</div>
+        <select class="form-control" id="select_owner">
+            <option>---</option>
+            {{# each sharingUser }}
+            <option value="{{_id}}">{{ profile.name }}</option>
+            {{/each }}
+        </select>
+    </div>
+        {{#each sharedLists }}
+            {{> sharedList }}
+        {{/each }}
+</template>

@@ -1,0 +1,11 @@
+<template name="sharedItem">
+    {{# if checked }}
+        {{# if canUncheck }}
+            <div class="item shared_item"><input type="checkbox" checked="{{ checked }}" title="{{ checkerUser.profile.name }}"/><span class="item_label" title="{{ name }}">{{name}}</span></div>
+        {{ else }}
+            <div class="item shared_item"><input type="checkbox" checked="{{ checked }}" title="{{ checkerUser.profile.name }}" disabled /><span class="item_label" title="{{ name }}">{{name}}</span></div>
+        {{/ if }}
+    {{ else }}
+            <div class="item shared_item"><input type="checkbox" checked="{{ checked }}"/><span class="item_label" title="{{ name }}">{{name}}</span></div>
+    {{/ if }}
+</template>
