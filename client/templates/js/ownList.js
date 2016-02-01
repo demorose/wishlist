@@ -25,6 +25,7 @@ Template.ownList.events({
         var message = '<div class="row">  ' +
                 '<div class="col-md-12"> ' +
                 '<form class="form-horizontal"> ' +
+                '<input name="search">' +
                 '<div class="form-group"> ';
 
         var users =  Meteor.users.find({_id : {$ne : Meteor.userId()}})
