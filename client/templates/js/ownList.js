@@ -26,7 +26,7 @@ Template.ownList.events({
                 '<div class="col-md-12"> ' +
                 '<form class="form-horizontal"> ' +
                 '<div class="form-group"> ' +
-                '<select name="users" class="selectpicker" multiple data-live-search="true">';
+                '<select name="users" class="selectpicker" multiple data-size="6" data-live-search="true">';
         ;
 
         var users =  Meteor.users.find({_id : {$ne : Meteor.userId()}})
