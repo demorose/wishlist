@@ -25,20 +25,18 @@ Template.ownList.events({
         var message = '<div class="row">  ' +
                 '<div class="col-md-12"> ' +
                 '<form class="form-horizontal"> ' +
-                '<input name="search">' +
-                '<div class="form-group"> ';
+                '<div class="form-group"> ' +
+                '<select name="users" class="selectpicker" multiple data-live-search="true">';
+        ;
 
         var users =  Meteor.users.find({_id : {$ne : Meteor.userId()}})
         users.forEach(function(user) {
-            message += '<div class="checkbox-inline"> \
-                <label> \
-                    <input name="users[]" type="checkbox" ' + (list.sharedWith.indexOf(user._id) != -1 ? 'checked="checked"' : '') +' id="" value="' + user._id + '" aria-label=""> \
-                    ' + user.profile.name + ' \
-                </label> \
-            </div>'
+            message += '<option '+ (list.sharedWith.indexOf(user._id) != -1 ? 'selected="true"' : '') +' value="' + user._id + '" data-content="<span class=\'label label-default\'>' + user.profile.name + '</span>">' +
+                         user.profile.name +
+                    '</option>';
         });
 
-        message += '</div> ' +
+        message += '</select></div> ' +
                 '</div> </div>' +
                 '</form> </div>  </div>';
 
@@ -50,19 +48,15 @@ Template.ownList.events({
                     label: i18n("share"),
                     className: "btn-success",
                     callback: function () {
-                        var users = [];
-                        var checkboxes = $('input[name="users[]"');
-                        checkboxes.each(function() {
-                            if (this.checked) {
-                                users.push(this.value);
-                            }
-                        });
+                        var users = $('select[name="users"]').val();
                         Meteor.call('shareList', list._id, users);
                     }
                 }
             }
         });
+        $('.selectpicker').selectpicker({});
     },
+
     'submit form.addItem': function(e) {
         var list = this;
         e.preventDefault();
