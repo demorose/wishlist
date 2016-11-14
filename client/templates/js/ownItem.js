@@ -10,6 +10,6 @@ Template.ownItem.helpers({
     name_urlify : function() {
         var item = this;
         var urlRegex = /(https?:\/\/[^\s]+)/g;
-        return item.name.replace(urlRegex, '<a href="$1">$1</a>')
+        return item.name.replace(urlRegex, '<a target="_blank" href="$1">$1</a>')
     }
 });
