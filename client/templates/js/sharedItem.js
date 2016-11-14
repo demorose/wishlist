@@ -8,6 +8,11 @@ Template.sharedItem.helpers({
     },
     canUncheck : function() {
         return (this.checker == Meteor.userId());
+    },
+    name_urlify : function() {
+        var item = this;
+        var urlRegex = /(https?:\/\/[^\s]+)/g;
+        return item.name.replace(urlRegex, '<a href="$1">$1</a>')
     }
 })
 
