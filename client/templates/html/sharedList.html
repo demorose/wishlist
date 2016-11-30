@@ -7,6 +7,14 @@
                     {{> sharedItem }}
                 {{/each }}
             </div>
+            <form class="addItem">
+                <div class="input-group">
+                    <input class="form-control add_item input-group-addon" type="text" name="name" />
+                    <span class = "input-group-btn">
+                        <button class="btn btn-primary validate" type="submit">{{i18n "add"}}</button>
+                    </span>
+                </div>
+            </form>
             <div class="actions">
                 <span data-toggle="tooltip" data-placement="bottom" title="{{i18n "unsubscribe"}}" class="action unsubscribe glyphicon glyphicon-remove"></span>
             </div>

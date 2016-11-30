@@ -25,4 +25,12 @@ Template.sharedList.events({
             }
         })
     },
+    'submit form.addItem': function(e) {
+        var list = this;
+        e.preventDefault();
+        var text = e.target.name.value;
+        Meteor.call('createItemForSharedList', text, list._id);
+        // Clear form
+        e.target.name.value = "";
+    },
 })
